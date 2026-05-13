@@ -101,7 +101,8 @@ class NoteSampler:
         last = 0.0
         max_notes = 0
         for iteration in range(n_iterations):
-            scores = np.sum(self.chords[tuple(notes[iteration])])
+            chord = np.diff(notes[iteration])
+            scores = float(np.sum(self.chords[tuple(chord)]))
             if scores > last and len(notes[iteration][notes[iteration] != 0]) >= max_notes:
                 last = scores
                 best = iteration
