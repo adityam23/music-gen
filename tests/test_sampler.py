@@ -1,9 +1,8 @@
 import logging
-import numpy as np
 
 from tqdm import tqdm
 
-from music_gen.utils import load_file, make_midi_dir
+from music_gen.utils import load_file
 from music_gen.pre_processing import make_windows
 from music_gen.post_processing import NoteSampler, dummy_model_output
 
@@ -14,8 +13,6 @@ def run() -> None:
     voices = load_file("data/F.txt")
 
     note_sampler = NoteSampler(voices)
-
-    midi_path = make_midi_dir()
 
     split_idx = int(voices.shape[1] * 0.9)
     _, v_test = voices[:, :split_idx], voices[:, split_idx:]
