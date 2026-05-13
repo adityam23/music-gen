@@ -11,7 +11,6 @@ def make_windows(
     if voices is None:
         voices = x.copy()
     n_voices = len(voices)
-    n_notes = voices.max() + 1
     n_windows = x.shape[1] - (window_size + 1)
 
     if not training:

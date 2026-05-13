@@ -6,13 +6,10 @@ import numpy as np
 import tensorflow as tf
 import tensorflow.keras.layers as layers
 
-from pathlib import Path
-from tqdm import tqdm
 from sklearn.utils import shuffle
 
-from music_gen.utils import load_file, make_midi_dir, make_log_dir
+from music_gen.utils import load_file, make_log_dir
 from music_gen.pre_processing import make_windows
-from music_gen.post_processing import NoteSampler
 
 np.set_printoptions(threshold=sys.maxsize)
 np.set_printoptions(precision=5)
@@ -47,9 +44,6 @@ def run() -> None:
     voices = load_file("data/F.txt")
     n_notes = voices.max() + 1
 
-    note_sampler = NoteSampler(voices)
-
-    midi_path = make_midi_dir()
     log_dir = make_log_dir()
 
     split_idx = int(voices.shape[1] * 0.9)

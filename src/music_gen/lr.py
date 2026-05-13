@@ -2,13 +2,12 @@ import sys
 import logging
 import numpy as np
 
-from pathlib import Path
 from tqdm import tqdm
 from sklearn.utils import shuffle
 from sklearn.linear_model import Ridge
 from sklearn.model_selection import GridSearchCV
 
-from music_gen.utils import load_file, make_midi_dir, make_log_dir
+from music_gen.utils import load_file
 from music_gen.pre_processing import make_windows
 from music_gen.post_processing import NoteSampler
 
@@ -26,9 +25,6 @@ def run() -> None:
     voices = load_file("data/F.txt")
 
     note_sampler = NoteSampler(voices)
-
-    midi_path = make_midi_dir()
-    log_dir = make_log_dir()
 
     split_idx = int(voices.shape[1] * 0.9)
     v_train, v_test = voices[:, :split_idx], voices[:, split_idx:]

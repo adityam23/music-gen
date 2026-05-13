@@ -1,9 +1,8 @@
 import logging
 import numpy as np
-import music21
 
 from pathlib import Path
-from music21 import midi, stream, converter
+from music21 import midi, converter
 
 
 class NoteSampler:
