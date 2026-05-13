@@ -107,6 +107,8 @@ def prepare_data(cfg: Config) -> tuple[np.ndarray, ...]:
 
 
 def build_model(n_notes: int, n_voices: int, cfg: Config) -> tf.keras.Sequential:
+    n_notes = int(n_notes)
+    n_voices = int(n_voices)
     regularizer = tf.keras.regularizers.L2(l2=cfg.l2_reg)
 
     model = tf.keras.Sequential(name="lstm_bach")

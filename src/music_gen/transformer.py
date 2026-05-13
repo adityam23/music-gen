@@ -31,6 +31,8 @@ def build_transformer_model(
     n_voices: int,
     cfg: Config,
 ) -> tf.keras.Model:
+    n_notes = int(n_notes)
+    n_voices = int(n_voices)
     d_model = 64
     num_heads = 4
     num_transformer_blocks = 4

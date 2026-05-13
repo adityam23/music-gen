@@ -47,6 +47,7 @@ def encode_inputs(x: np.ndarray, voices: np.ndarray) -> np.ndarray:
 
     for t_step, beat in enumerate(x.transpose()):
         for v_idx, note in enumerate(beat):
+            note = int(note)
             if note == 0:
                 encoded[t_step, v_idx] = np.zeros(5)
                 continue
