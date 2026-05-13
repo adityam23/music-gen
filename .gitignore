@@ -1,0 +1,31 @@
+# Agent instructions (local only)
+AGENTS.md
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# uv
+uv.lock
+
+# Trained models
+*.h5
+*.keras
+
+# Generated output
+output.txt
+midi_data/
+logs/
+_scratch/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+.vscode/

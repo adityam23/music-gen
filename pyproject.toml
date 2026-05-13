@@ -1,0 +1,25 @@
+[project]
+name = "music-gen"
+version = "0.1.0"
+description = "Bach chorale generation with LSTM and Transformer models"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "h5py>=3.16.0",
+    "matplotlib>=3.10.9",
+    "music21>=9.9.2",
+    "numpy>=2.4.4",
+    "pandas>=3.0.3",
+    "scikit-learn>=1.8.0",
+    "scipy>=1.17.1",
+    "tensorflow>=2.20.0",
+    "tqdm>=4.67.3",
+]
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+    "mypy>=2.1.0",
+    "pytest>=9.0.3",
+    "ruff>=0.15.12",
+]
