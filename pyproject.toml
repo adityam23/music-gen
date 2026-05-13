@@ -12,6 +12,7 @@ dependencies = [
     "pandas>=3.0.3",
     "scikit-learn>=1.8.0",
     "scipy>=1.17.1",
+    "tensorboard>=2.20.0",
     "tensorflow[and-cuda]>=2.21",
     "tqdm>=4.67.3",
 ]
