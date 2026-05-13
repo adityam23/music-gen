@@ -16,9 +16,14 @@ env/
 
 # Generated output
 output.txt
+output_transformer.txt
 LR_output.txt
 midi_data/
 midi_data_transformer/
+lstm_combined.mid
+lstm_combined.wav
+transformer_combined.mid
+transformer_combined.wav
 logs/
 _scratch/
 

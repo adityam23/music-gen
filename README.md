@@ -47,14 +47,21 @@ Grid search hyperparameters:
 uv run python -m music_gen.gridsearch
 ```
 
-Create MIDI from a prediction file:
+Create combined multi-track MIDI from predictions:
 
 ```bash
-uv run python -m music_gen.make_midi output.txt
+uv run python make_combined_midi.py
 ```
 
-Generated MIDI files are saved to `midi_data/`. TensorBoard logs are
-written to `logs/`.
+Convert combined MIDI to WAV audio (requires timidity++):
+
+```bash
+timidity -Ow -o lstm_combined.wav lstm_combined.mid
+timidity -Ow -o transformer_combined.wav transformer_combined.mid
+```
+
+Generated MIDI files are saved to `midi_data/` and `midi_data_transformer/`.
+TensorBoard logs are written to `logs/`.
 
 ```bash
 uv run tensorboard --logdir logs/
@@ -80,6 +87,8 @@ src/
     gridsearch.py        Hyperparameter grid search
     make_midi.py         MIDI file export utility
     make_score.py        Score viewer utility
+make_combined_midi.py    Multi-track MIDI from prediction arrays
+convert_wav.py           Pure Python MIDI-to-WAV synthesis
 data/
     F.txt                Bach chorale dataset
 tests/
