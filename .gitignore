@@ -10,21 +10,23 @@ __pycache__/
 venv/
 env/
 
-# uv
-uv.lock
-
 # Trained models
 *.h5
 *.keras
 
 # Generated output
 output.txt
+LR_output.txt
 midi_data/
+midi_data_transformer/
 logs/
 _scratch/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Ruff
+.ruff_cache/
 
 # IDE
 .idea/

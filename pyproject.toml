@@ -5,14 +5,14 @@ description = "Bach chorale generation with LSTM and Transformer models"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "h5py>=3.16.0",
+    "h5py",
     "matplotlib>=3.10.9",
     "music21>=9.9.2",
-    "numpy>=2.4.4",
+    "numpy",
     "pandas>=3.0.3",
     "scikit-learn>=1.8.0",
     "scipy>=1.17.1",
-    "tensorflow>=2.20.0",
+    "tensorflow[and-cuda]>=2.21",
     "tqdm>=4.67.3",
 ]
 
