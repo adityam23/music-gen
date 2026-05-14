@@ -2,7 +2,7 @@
 title: What I Learned Trying to Teach a Machine Bach
 description: Debugging autoregressive sequence models through Bach chorale generation.
 date: 2025-05-14
-repo_url: https://https://github.com/adityam23/music-gen
+repo_url: https://github.com/adityam23/music-gen
 giscus_repo: adityam23/music-gen
 giscus_repo_id: R_kgDOSchQYg
 giscus_category: Announcements
