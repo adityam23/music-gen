@@ -36,3 +36,4 @@ _scratch/
 # IDE
 .idea/
 .vscode/
+chart_output/
