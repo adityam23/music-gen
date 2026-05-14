@@ -179,7 +179,7 @@ long-range dependencies differently. Right now the LSTM produces
 consistent output while the Transformer has a tendency toward long
 silences. More tuning is needed.
 
-![Training curves: LSTM vs Transformer loss and accuracy over 30 epochs](assets/training_curves.png)
+![Training curves: LSTM vs Transformer loss and accuracy over 30 epochs](https://raw.githubusercontent.com/adityam23/music-gen/main/portfolio/assets/training_curves.png)
 
 The training curves show the LSTM converging smoothly while the
 Transformer oscillates and its validation loss trends upward, a clear
@@ -188,7 +188,7 @@ the project and not yet optimized. It currently suffers from the same
 failure modes the early LSTM did: long silences and repetitive loops.
 More tuning is needed before it can be compared fairly.
 
-![Model size comparison: parameter count and file size](assets/model_comparison.png)
+![Model size comparison: parameter count and file size](https://raw.githubusercontent.com/adityam23/music-gen/main/portfolio/assets/model_comparison.png)
 
 **Linear regression baseline.** Before assuming any deep learning is
 necessary, I trained a Ridge regression model on the same windowed
@@ -209,9 +209,9 @@ itself drew from an unpublished thesis. The idea is to give the model
 musical structure for free so it can spend its capacity on learning
 counterpoint and phrasing rather than rediscovering that octaves exist.
 
-![Pitch distribution across the four voices in the Bach training data](assets/pitch_values_all2.png)
+![Pitch distribution across the four voices in the Bach training data](https://raw.githubusercontent.com/adityam23/music-gen/main/portfolio/assets/pitch_values_all2.png)
 
-![Note duration distribution showing typical note lengths](assets/note_length.png)
+![Note duration distribution showing typical note lengths](https://raw.githubusercontent.com/adityam23/music-gen/main/portfolio/assets/note_length.png)
 
 The charts show why the representation matters. Each voice occupies a
 distinct pitch range, and notes typically last 4 to 8 timesteps, not
@@ -231,7 +231,7 @@ between the four voices against the distribution observed in Bach. At
 each generation step, 20 candidate combinations are drawn, scored, and
 the best one is selected.
 
-![Interval jump distribution between consecutive notes per voice](assets/note_deltas_all.png)
+![Interval jump distribution between consecutive notes per voice](https://raw.githubusercontent.com/adityam23/music-gen/main/portfolio/assets/note_deltas_all.png)
 
 The sampler does not guarantee good output. But it prevents the model
 from drifting into degenerate regions by anchoring the autoregressive
